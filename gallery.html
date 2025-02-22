@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея Марсика</title>
+    <script src="https://cdn.sharknet.fun/js/tailwind.js"></script>
+    <style>
+        .image-zoom {
+            transition: transform 0.5s ease;
+        }
+        .image-zoom:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <header class="bg-gray-800 p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <nav class="space-x-6">
+                <a href="index.html" class="hover:underline text-gray-300 hover:text-blue-400 transition">Про мене</a>
+                <a href="gallery.html" class="hover:underline text-gray-300 hover:text-blue-400 transition">Галерея</a>
+                <a href="index.html" class="hover:underline text-gray-300 hover:text-blue-400 transition">Контакти</a>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="py-16 bg-gray-700 text-center">
+        <h1 class="text-4xl font-bold mb-6">Галерея Марсика</h1>
+        <div id="gallery" class="flex flex-wrap justify-center gap-4">
+            <!-- Статичні зображення -->
+            <img src="img/marsik/photo_2025-02-19_20-18-36.jpg" alt="Фото Марсика" class="w-64 h-64 object-cover rounded-lg shadow-lg m-2 image-zoom">
+            <img src="img/marsik/photo_2025-02-19_20-18-40.jpg" alt="Фото Марсика" class="w-64 h-64 object-cover rounded-lg shadow-lg m-2 image-zoom">
+            <img src="img/marsik/photo_2025-02-19_20-18-43.jpg" alt="Фото Марсика" class="w-64 h-64 object-cover rounded-lg shadow-lg m-2 image-zoom">
+            <img src="img/marsik/photo_2025-02-19_20-19-04.jpg" alt="Фото Марсика" class="w-64 h-64 object-cover rounded-lg shadow-lg m-2 image-zoom">
+            <img src="img/marsik/photo_2025-02-19_20-19-07.jpg" alt="Фото Марсика" class="w-64 h-64 object-cover rounded-lg shadow-lg m-2 image-zoom">
+            <img src="img/marsik/photo_2025-02-19_20-19-11.jpg" alt="Фото Марсика" class="w-64 h-64 object-cover rounded-lg shadow-lg m-2 image-zoom">
+            <img src="img/marsik/photo_2025-02-19_20-19-15.jpg" alt="Фото Марсика" class="w-64 h-64 object-cover rounded-lg shadow-lg m-2 image-zoom">
+            <img src="img/marsik/photo_2025-02-19_20-19-18.jpg" alt="Фото Марсика" class="w-64 h-64 object-cover rounded-lg shadow-lg m-2 image-zoom">
+        </div>
+    </section>
+    
+    <footer class="bg-gray-800 py-4 text-center">
+        <p>© 2025 Марсик. Усі права захищено.</p>
+    </footer>
+</body>
+</html>

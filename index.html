@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Марсик</title>
+    <script src="https://cdn.sharknet.fun/js/tailwind.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            window.addEventListener('scroll', () => {
+                fadeElements.forEach(element => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    if (elementTop < window.innerHeight) {
+                        element.classList.add('visible');
+                    }
+                });
+            });
+        });
+    </script>
+    <style>
+        /* Загальні стилі */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+        }
+
+        /* Паралакс фон */
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* Анімація зображень при наведенні */
+        .image-zoom {
+    transition: transform 0.5s ease;
+}
+
+.image-zoom:hover {
+    transform: scale(1.1);
+}
+
+
+        /* Анімація для кнопок */
+        .hover-button:hover {
+            background-color: #4CAF50;
+            transform: scale(1.1);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Навігаційне меню -->
+    <header class="bg-gray-800 p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <nav class="space-x-6">
+                <a href="#about" class="hover:underline text-gray-300 hover:text-blue-400 transition">Про мене</a>
+                <a href="gallery.html" class="hover:underline text-gray-300 hover:text-blue-400 transition">Галерея</a>
+                <a href="#contact" class="hover:underline text-gray-300 hover:text-blue-400 transition">Контакти</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Головна секція з паралакс ефектом -->
+    <section id="home" class="h-screen flex items-center justify-center bg-gray-800 text-center parallax" style="background-image: url('your-image.jpg');">
+        <div class="fade-in">
+            <img src="logo.jpg" alt="Марсик" class="w-64 h-64 rounded-full mx-auto mb-4 object-cover image-zoom">
+            <h1 class="text-4xl font-bold">Привіт, я Марсик!</h1>
+            <p class="mt-2 text-lg">Я — найкращий кіт у світі!</p>
+        </div>
+    </section>
+
+    <!-- Контакти з ефектом fade-in -->
+    <section id="contact" class="py-16 bg-gray-700">
+        <div class="container mx-auto text-center fade-in">
+            <h2 class="text-3xl font-semibold mb-4">Контакти</h2>
+            <p>Мене можна знайти в Інтернеті або в дворі хати. Напишіть мені на котячий email: <a href="mailto:marsik@sharknet.fun" class="text-blue-400 hover:underline">marsik@sharknet.fun</a></p>
+        </div>
+    </section>
+
+    <!-- Підвал з плавним появою -->
+    <footer class="bg-gray-800 py-4 text-center fade-in">
+        <p>© 2025 Марсик. Усі права захищено.</p>
+    </footer>
+
+</body>
+</html>
